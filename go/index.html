@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirection...</title>
+</head>
+<body>
+  <p id="msg">Redirection...</p>
+  <script>
+    var links = {
+      "1": "https://www.youtube.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com",
+      "4": "https://www.google.com",
+      "5": "https://www.google.com",
+      "6": "https://www.google.com",
+      "7": "https://www.google.com",
+      "8": "https://www.google.com",
+      "9": "https://www.google.com",
+      "10": "https://www.google.com"
+    };
+    var id = new URLSearchParams(location.search).get("q");
+    if (links[id]) {
+      location.replace(links[id]);
+    } else {
+      document.getElementById("msg").textContent = "Lien introuvable";
+    }
+  </script>
+</body>
+</html>
